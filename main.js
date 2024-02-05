@@ -1,5 +1,5 @@
 //import './style.css'
-import AgoraRTC from "agora-rtc-sdk-ng"
+//import AgoraRTC from "agora-rtc-sdk-ng"
 //import AgoraRTM from "agora-rtm-sdk"
 
 import appid from './appId.js'
@@ -88,14 +88,14 @@ let initVolumeIndicator = async () => {
       try{
           let item = document.getElementsByClassName(`user-rtc-${volume.uid}`)[0]
 
-          if (volume.level >=80) {
+          if (volume.level >=40) {
             item.style.boxShadow = '0 0 30px #00ff00';
-          }else if(volume.level >= 60 && volume.level <80){
+          }else if(volume.level >= 20 && volume.level <40){
             item.style.boxShadow = '0 0 20px #00ff00';
-          } else if(volume.level >= 50 && volume.level <60){
+          } else if(volume.level >= 5 && volume.level <20){
             item.style.boxShadow = '0 0 10px #00ff00';
           } 
-          else if(volume.level >= 40 && volume.level <50){
+          else if(volume.level >= 3 && volume.level <5){
             item.style.boxShadow = '0 0 7px #00ff00';
           } 
           else {
